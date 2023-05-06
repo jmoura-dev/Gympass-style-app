@@ -57,6 +57,6 @@ describe('Check-in Service', () => {
       userId: 'user-01',
     })
 
-    expect(checkIn).toEqual(expect.any(String))
+    expect(checkIn.id).toEqual(expect.any(String))
   })
 })
