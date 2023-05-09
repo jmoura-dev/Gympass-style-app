@@ -3,7 +3,7 @@ import { PrismaUserRepository } from '@/repositories/prisma/prisma-users-reposit
 
 export function makeGetUserProfileService() {
   const usersRepository = new PrismaUserRepository()
-  const getUserProfileService = new GetUserProfileService(usersRepository)
+  const service = new GetUserProfileService(usersRepository)
 
-  return getUserProfileService
+  return service
 }

@@ -3,7 +3,7 @@ import { PrismaUserRepository } from '@/repositories/prisma/prisma-users-reposit
 
 export function makeAuthenticateService() {
   const usersRepository = new PrismaUserRepository()
-  const authenticateService = new AuthenticateService(usersRepository)
+  const service = new AuthenticateService(usersRepository)
 
-  return authenticateService
+  return service
 }

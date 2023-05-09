@@ -1,6 +1,6 @@
 import { expect, describe, it, beforeEach, vi, afterEach } from 'vitest'
 import { InMemoryCheckInsRepository } from '@/repositories/in-memory/in-memory-check-ins-repository'
-import { CheckInService } from './checkin'
+import { CheckInService } from './check-in'
 import { InMemoryGymsInsRepository } from '@/repositories/in-memory/in-memory-gyms-repository'
 import { Decimal } from '@prisma/client/runtime/library'
 import { MaxDistanceError } from './errors/max-distance-error'
