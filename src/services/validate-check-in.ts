@@ -5,7 +5,7 @@ import dayjs from 'dayjs'
 import { LateCheckInValidationError } from './errors/late-check-in-validation-error'
 
 interface ValidateCheckInServiceRequest {
-  CheckInId: string
+  checkInId: string
 }
 
 interface ValidateCheckInServiceResponse {
@@ -16,9 +16,9 @@ export class ValidateCheckInService {
   constructor(private checkInsRepository: CheckInsRepository) {}
 
   async execute({
-    CheckInId,
+    checkInId,
   }: ValidateCheckInServiceRequest): Promise<ValidateCheckInServiceResponse> {
-    const checkIn = await this.checkInsRepository.findById(CheckInId)
+    const checkIn = await this.checkInsRepository.findById(checkInId)
 
     if (!checkIn) {
       throw new ResourceNotFoundError()
